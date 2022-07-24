@@ -1,0 +1,62 @@
+.create {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-primary);
+}
+
+.cr-box {
+  width: 500px;
+  height: 500px;
+  background-color: var(--bg-primary);
+  border-radius: 35px;
+}
+
+.cr-content {
+  margin: 30px;
+}
+
+.cr-title {
+  font-size: var(--title-size);
+  font-weight: bold;
+}
+
+.cr-plans {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cr-p-columns:first-child div {
+  justify-content: start;
+}
+
+
+.cr-p-columns input {
+  height: 30px;
+  background-color: var(--bg-focus);
+  width: 100%;
+  color: var(--text-primary);
+}
+
+.cr-p-columns {
+  width: 100%;
+}
+
+.cr-p-rows {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 60px;
+  border-bottom: 2px solid var(--text-primary);
+}
+
+.cr-submit {
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: var(--bg-focus);
+  color: var(--text-primary);
+  font-weight: bold;
+}
