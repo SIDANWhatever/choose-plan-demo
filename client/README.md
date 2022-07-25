@@ -1,4 +1,4 @@
-# Getting Started with Full Stack Demo
+# Getting Started with Full Stack Demo - Frontend
 
 Please follow below's instruction on building the frontend demo locally
 
