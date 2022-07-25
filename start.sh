@@ -8,6 +8,7 @@ docker run --name plans-demo -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d
 
 sleep 5
 docker exec -it plans-demo bash -c "mysql -uroot -pmy-secret-pw -e \"CREATE DATABASE Plans\""
+
 sleep 5
 
 # Building server
