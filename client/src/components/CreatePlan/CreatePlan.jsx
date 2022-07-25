@@ -13,7 +13,6 @@ const CreatePlan = () => {
   const { loading, setLoading, setChoosing } = useContext(PlanContext);
 
   const createPlan = () => {
-    setChoosing(true);
     setLoading(true);
     axios
       .post("http://localhost:3001/plans/", {
@@ -26,10 +25,12 @@ const CreatePlan = () => {
       .then((res) => {
         console.log("Successful creation");
         setLoading(false);
+        setChoosing(true);
       })
       .catch((err) => {
         console.log("Error: ", err.message);
         setLoading(false);
+        setChoosing(true);
       });
   };
 
