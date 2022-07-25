@@ -5,6 +5,8 @@
 
 ## Quick Start
 
+Please ensure node and docker are installed prior to running the shell script.
+
 Please clone the repo and start the simple quick start shell script as
 
 ```
