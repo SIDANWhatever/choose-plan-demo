@@ -9,5 +9,9 @@ Please clone the repo and start the simple quick start shell script as
 
 ```
 git clone https://github.com/SIDANWhatever/choose-plan-demo.git
+```
+
+```
+cd choose-plan-demo
 sh start.sh
 ```

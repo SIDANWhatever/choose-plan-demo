@@ -8,13 +8,13 @@ docker run --name plans-demo -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d
 
 sleep 5
 docker exec -it plans-demo bash -c "mysql -uroot -pmy-secret-pw -e \"CREATE DATABASE Plans\""
-sleep 1
+sleep 5
 
 # Building server
 docker build -t chooseplanserver .
 docker run --name api -p 3001:4000 -d chooseplanserver
 
-sleep 1
+sleep 5
 # Building sample plans
 curl -X POST http://localhost:3001/plans \
    -H 'Content-Type: application/json' \

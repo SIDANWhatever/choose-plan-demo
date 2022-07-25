@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import axios from "axios";
 import "./createPlan.css";
+import { PlanContext } from "../../Contexts/PlanContext";
 
 const CreatePlan = () => {
   const [name, setName] = useState("");
@@ -9,7 +10,11 @@ const CreatePlan = () => {
   const [physiotherapy, setPhysiotherapy] = useState(false);
   const [fee, setFee] = useState(0);
 
+  const { loading, setLoading, setChoosing } = useContext(PlanContext);
+
   const createPlan = () => {
+    setChoosing(true);
+    setLoading(true);
     axios
       .post("http://localhost:3001/plans/", {
         name: name,
@@ -20,9 +25,11 @@ const CreatePlan = () => {
       })
       .then((res) => {
         console.log("Successful creation");
+        setLoading(false);
       })
       .catch((err) => {
         console.log("Error: ", err.message);
+        setLoading(false);
       });
   };
 

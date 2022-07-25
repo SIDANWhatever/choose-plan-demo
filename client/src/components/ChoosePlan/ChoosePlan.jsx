@@ -1,15 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import "./choosePlan.css";
 import Tick from "../../Assets/Tick";
 import Cross from "../../Assets/Cross";
 import Spinner from "./Spinner/Spinner";
+import { PlanContext } from "../../Contexts/PlanContext";
 
 const ChoosePlan = () => {
   const [plans, setPlans] = useState(false);
   const [checked, setChecked] = useState(1);
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+  const { loading, setLoading } = useContext(PlanContext);
 
   const getAllPlan = () => {
     setLoading(true);
